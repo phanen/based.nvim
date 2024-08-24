@@ -99,7 +99,7 @@ end
 -- @param bufnr number: used to get patterns for the buffer's filetype
 -- @return (number, string): parsed number and "dec" or "hex"
 local buf_parse_int = function(str, base, bufnr)
-    local patterns = M.opts.patterns[vim.api.nvim_buf_get_option(bufnr or 0, "filetype")]
+    local patterns = M.opts.patterns[vim.bo[bufnr or 0].filetype]
     local n
     if base == "hex" then
         n = parse_int(str, 16, patterns.hex)

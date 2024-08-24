@@ -17,7 +17,7 @@ based.setup({
     highlight = "MyHighlightGroup"
 })
 
-vim.api.nvim_set_keybind({ "n", "v" }, "<C-b>", based.convert)                            -- Try to detect base and convert
-vim.api.nvim_set_keybind({ "n", "v" }, "<leader>Bh", function() based.convert("hex") end) -- Convert from hex
-vim.api.nvim_set_keybind({ "n", "v" }, "<leader>Bd", function() based.convert("dec") end) -- Convert from decimal
+vim.api.nvim_set_keymap({ "n", "x" }, "<C-b>", based.convert)                            -- Try to detect base and convert
+vim.api.nvim_set_keymap({ "n", "x" }, "<leader>Bh", function() based.convert("hex") end) -- Convert from hex
+vim.api.nvim_set_keymap({ "n", "x" }, "<leader>Bd", function() based.convert("dec") end) -- Convert from decimal
 ```
